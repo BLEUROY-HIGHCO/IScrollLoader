@@ -15,11 +15,10 @@ Installation
 8. Add these lines after the div[data-role=page]:
 
         <script>
-
-        $('div[data-role="page"]').live('pageshow',function(){
-            if(window.plugins.is == undefined){
-                window.plugins.is = new IS();
-            }
-            window.plugins.is.initPageScroll();
-        });
+            $('div[data-role="page"]').live('pageshow',function(){
+                if(window.plugins.is == undefined){
+                    window.plugins.is = new IS();
+                }
+                window.plugins.is.initPageScroll();
+            });
         </script>

@@ -15,7 +15,11 @@ Installation
 8. Add these lines after the div[data-role=page]:
 
         <script>
-            $('div[data-role="page"]').live('pageshow',function(){
+                if(!window.plugins)
+                {
+                    window.plugins = {};
+                }
+                $('div[data-role="page"]').live('pageshow',function(){
                 if(window.plugins.is == undefined){
                     window.plugins.is = new IS();
                 }
